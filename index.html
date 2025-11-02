@@ -7,15 +7,18 @@
   <meta name="description" content="Abon Sapi Tumbuk BAROKAH — rasa gurih asli daging sapi pilihan, cocok untuk nasi, roti, atau bekal anak. Halalan Toyyiban, buatan UMKM Barokah Food sejak 2018.">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
+ <style>
+  /* === GLOBAL === */
   body {
     background-color: #fffaf3;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
     color: #2e2e2e;
   }
-
-  /* HEADER */
+  h1, h2, h3 {
+    font-weight: 600;
+  }
+  /* === HEADER === */
   .hero-section {
     background: linear-gradient(135deg, #2e7d32, #b8860b);
     color: #fffaf3;
@@ -23,75 +26,96 @@
     background-size: cover;
     background-position: center;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
   }
-
+  .hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.1), transparent 70%);
+    animation: heroGlow 5s infinite alternate;
+  }
+  @keyframes heroGlow {
+    from { opacity: 0.3; }
+    to { opacity: 0.7; }
+  }
   .hero-section a {
     background-color: #b8860b;
     color: #fffaf3;
     font-weight: 600;
-    transition: 0.3s;
+    padding: 12px 30px;
+    border-radius: 999px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px rgba(184, 134, 11, 0.5);
   }
-
   .hero-section a:hover {
     background-color: #2e7d32;
-    color: #fffaf3;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(46, 125, 50, 0.8);
   }
-
-  /* PRODUK */
+  /* === PRODUK === */
   section#produk {
     background-color: #fffaf3;
+    padding: 60px 0;
   }
-
   .produk-card {
     background-color: white;
     border: 2px solid #a5d6a7;
     border-radius: 16px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-
   .produk-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(46,125,50,0.25);
   }
-
   .produk-card h3 {
     color: #2e7d32;
     font-weight: 600;
   }
-
-  /* CTA / RESELLER */
+  /* === CTA / RESELLER === */
   section#reseller {
     background: linear-gradient(135deg, #a5d6a7, #b8860b);
     color: #2e2e2e;
+    text-align: center;
+    padding: 70px 20px;
   }
-
   section#reseller a {
     background-color: #2e7d32;
     color: #fffaf3;
+    font-weight: 600;
+    padding: 14px 34px;
+    border-radius: 999px;
     transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(46, 125, 50, 0.4);
   }
-
   section#reseller a:hover {
     background-color: #b8860b;
     color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(184, 134, 11, 0.8);
   }
-
-  /* FOOTER */
+  /* === FOOTER === */
   footer {
     background-color: #1b1b1b;
     color: #fefefe;
     border-top: 4px solid #b8860b;
   }
-
+  footer a {
+    transition: color 0.3s;
+  }
   footer a:hover {
     color: #b8860b;
   }
-
   footer h3 {
     color: #a5d6a7;
   }
-
-  /* SOSIAL MEDIA LINK */
+  /* === SOSIAL MEDIA LINK === */
   .social-link {
     display: flex;
     align-items: center;
@@ -101,12 +125,11 @@
     border-radius: 8px;
     transition: all 0.3s ease;
   }
-
   .social-link:hover {
     background: rgba(255, 255, 255, 0.25);
     transform: translateY(-2px);
+    box-shadow: 0 0 10px rgba(184, 134, 11, 0.4);
   }
-
   .social-link img {
     width: 28px;
     height: 28px;
@@ -356,6 +379,7 @@
   </footer>
  </body>
 </html>
+
 
 
 
