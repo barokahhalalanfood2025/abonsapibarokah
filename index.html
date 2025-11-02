@@ -8,39 +8,112 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    body {
-      background-color: #fdf8f3;
-      font-family: 'Poppins', sans-serif;
-      scroll-behavior: smooth;
-    }
-    .hero-section {
-      background: linear-gradient(135deg, #1e6847, #a67c3b);
-      color: white;
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
-    }
-    .social-link {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 8px 12px;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-    }
-    .social-link:hover {
-      background: rgba(255, 255, 255, 0.25);
-      transform: translateY(-2px);
-    }
-    .social-link img {
-      width: 28px;
-      height: 28px;
-      border-radius: 6px;
-    }
-  </style>
-</head>
+  body {
+    background-color: #fffaf3;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    color: #2e2e2e;
+  }
 
+  /* HEADER */
+  .hero-section {
+    background: linear-gradient(135deg, #2e7d32, #b8860b);
+    color: #fffaf3;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+  }
+
+  .hero-section a {
+    background-color: #b8860b;
+    color: #fffaf3;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  .hero-section a:hover {
+    background-color: #2e7d32;
+    color: #fffaf3;
+  }
+
+  /* PRODUK */
+  section#produk {
+    background-color: #fffaf3;
+  }
+
+  .produk-card {
+    background-color: white;
+    border: 2px solid #a5d6a7;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .produk-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .produk-card h3 {
+    color: #2e7d32;
+    font-weight: 600;
+  }
+
+  /* CTA / RESELLER */
+  section#reseller {
+    background: linear-gradient(135deg, #a5d6a7, #b8860b);
+    color: #2e2e2e;
+  }
+
+  section#reseller a {
+    background-color: #2e7d32;
+    color: #fffaf3;
+    transition: all 0.3s ease;
+  }
+
+  section#reseller a:hover {
+    background-color: #b8860b;
+    color: white;
+  }
+
+  /* FOOTER */
+  footer {
+    background-color: #1b1b1b;
+    color: #fefefe;
+    border-top: 4px solid #b8860b;
+  }
+
+  footer a:hover {
+    color: #b8860b;
+  }
+
+  footer h3 {
+    color: #a5d6a7;
+  }
+
+  /* SOSIAL MEDIA LINK */
+  .social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .social-link:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+  }
+
+  .social-link img {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+  }
+</style>
+</head>
 <body class="text-gray-800">
  
  <!-- HERO SECTION (Versi Background Warna Saja) -->
@@ -283,6 +356,7 @@
   </footer>
  </body>
 </html>
+
 
 
 
