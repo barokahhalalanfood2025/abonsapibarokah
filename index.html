@@ -1,407 +1,138 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abon Sapi Tumbuk BAROKAH — Gurih, Halus, dan Bikin Nagih!</title>
-  <meta name="description" content="Abon Sapi Tumbuk BAROKAH — rasa gurih asli daging sapi pilihan, cocok untuk nasi, roti, atau bekal anak. Halalan Toyyiban, buatan UMKM Barokah Food sejak 2018.">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
- <style>
-  /* === GLOBAL === */
-  body {
-    background-color: #fffaf3;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-    color: #2e2e2e;
-  }
-  h1, h2, h3 {
-    font-weight: 600;
-  }
-  /* === HEADER === */
-  .hero-section {
-    background: linear-gradient(135deg, #2e7d32, #b8860b);
-    color: #fffaf3;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
-    position: relative;
-    overflow: hidden;
-  }
-  .hero-section::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at center, rgba(255,255,255,0.1), transparent 70%);
-    animation: heroGlow 5s infinite alternate;
-  }
-  @keyframes heroGlow {
-    from { opacity: 0.3; }
-    to { opacity: 0.7; }
-  }
-  .hero-section a {
-    background-color: #b8860b;
-    color: #fffaf3;
-    font-weight: 600;
-    padding: 12px 30px;
-    border-radius: 999px;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 12px rgba(184, 134, 11, 0.5);
-  }
-  .hero-section a:hover {
-    background-color: #2e7d32;
-    color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 0 20px rgba(46, 125, 50, 0.8);
-  }
-  /* === PRODUK === */
-  section#produk {
-    background-color: #fffaf3;
-    padding: 60px 0;
-  }
-  .produk-card {
-    background-color: white;
-    border: 2px solid #a5d6a7;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .produk-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(46,125,50,0.25);
-  }
-  .produk-card h3 {
-    color: #2e7d32;
-    font-weight: 600;
-  }
-  /* === CTA / RESELLER === */
-  section#reseller {
-    background: linear-gradient(135deg, #a5d6a7, #b8860b);
-    color: #2e2e2e;
-    text-align: center;
-    padding: 70px 20px;
-  }
-  section#reseller a {
-    background-color: #2e7d32;
-    color: #fffaf3;
-    font-weight: 600;
-    padding: 14px 34px;
-    border-radius: 999px;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(46, 125, 50, 0.4);
-  }
-  section#reseller a:hover {
-    background-color: #b8860b;
-    color: white;
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(184, 134, 11, 0.8);
-  }
-  /* === FOOTER === */
-  footer {
-    background-color: #1b1b1b;
-    color: #fefefe;
-    border-top: 4px solid #b8860b;
-  }
-  footer a {
-    transition: color 0.3s;
-  }
-  footer a:hover {
-    color: #b8860b;
-  }
-  footer h3 {
-    color: #a5d6a7;
-  }
-  /* === SOSIAL MEDIA LINK === */
-  .social-link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: rgba(255, 255, 255, 0.08);
-    padding: 8px 12px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-  .social-link:hover {
-    background: rgba(255, 255, 255, 0.25);
-    transform: translateY(-2px);
-    box-shadow: 0 0 10px rgba(184, 134, 11, 0.4);
-  }
-  .social-link img {
-    width: 28px;
-    height: 28px;
-    border-radius: 6px;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pemesanan Abon Sapi Tumbuk Barokah</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .order-container {
+      max-width: 500px;
+      margin: 50px auto;
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255,0,0,0.3);
+    }
+    h2 {
+      color: #ff3333;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      color: #ddd;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #444;
+      border-radius: 8px;
+      background-color: #222;
+      color: #fff;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #ff3333;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #ff5555;
+    }
+    .total {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-top: 15px;
+      color: #00ff7f;
+      font-weight: bold;
+    }
+  </style>
 </head>
-<body class="text-gray-800">
- 
- <!-- HERO SECTION (Versi Background Warna Saja) -->
-<header class="hero-section text-center py-20 bg-gray-900 text-gray-200">
-  <h1 class="text-5xl font-extrabold">Abon Sapi Tumbuk BAROKAH</h1>
-  <p class="text-lg sm:text-xl mt-4 max-w-4xl mx-auto leading-relaxed text-center text-[color:#fff8dc]">
-  <span class="font-bold text-yellow-300">Solusi Lauk Instan Premium 5 Detik!</span><br>
-  <span class="font-semibold">Gurih, Halus, dan Bikin Nagih!</span><br>
-  Dibuat dari <span class="font-semibold">100% Daging Sapi Murni pilihan</span>, tanpa campuran dan tanpa bahan pengawet.<br>
-  <span class="font-medium">Tanpa MSG, Sehat, Halal, dan Praktis — cukup tabur, hidangan mewah tersaji.</span><br>
-  <span class="italic">Hemat waktu Anda untuk keluarga, bukan di dapur! 🍖✨</span>
-</p>
-  <a href="#produk" 
-   class="bg-yellow-600 text-white font-bold py-3 px-6 rounded-full mt-6 inline-block hover:bg-yellow-700 transition-all duration-300"
-   style="position: relative; z-index: 10;">
-  Lihat Produk Kami
-</a>
-</header>
- 
- <!-- PRODUK SECTION -->
-  <section id="produk" class="py-16 bg-white text-gray-800">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-10">Pilihan Produk Abon Sapi Tumbuk BAROKAH</h2>
-      
-      <div class="grid md:grid-cols-2 gap-10">
-        
-        <!-- PRODUK 10 GR -->
-        <div class="bg-yellow-50 p-6 rounded-2xl shadow-smooth">
-          <img src="Abon-10gr.jpg" alt="Abon Sapi Tumbuk Barokah 10gr" class="rounded-lg mb-4 w-full">
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">Kemasan 10gr (Sachet Sekali Makan)</h3>
-          <ul class="text-left mx-auto inline-block text-gray-700 mb-4">
-            <li>Harga ecer: <b>Rp 4.990 / sachet</b></li>
-            <li>1 pack isi 10 sachet: <b>Rp 37.900</b></li>
-            <li>Beli ≥ 3 pack: <b>Rp 35.200 / pack</b></li>
-            <li>Beli ≥ 6 pack: <b>Rp 34.850 / pack</b></li>
-            <li>Beli ≥ 10 pack: <b>Rp 34.150 / pack</b></li>
-            <li>Beli ≥ 25 pack: <b>Rp 32.250 / pack</b></li>
-            <li>Reseller: Diskon 22% / Rp 29.600 / Pack (min. 50 pcs)</li>
-          </ul>
-          <p class="text-sm text-gray-500 mb-3">*Belum termasuk ongkir</p>
-          <a href="https://wa.me/6285725046201?text=Halo%20Barokah%2C%20saya%20ingin%20pesan%20Abon%20Sapi%20Tumbuk%2010gr" target="_blank" class="inline-block bg-green-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-600 transition">
-            Pesan via WhatsApp
-          </a>
-        </div>
+<body>
+  <div class="order-container">
+    <h2>Form Pemesanan Abon Sapi Tumbuk Barokah</h2>
+    <label>Nama Lengkap</label>
+    <input type="text" id="nama" placeholder="Masukkan nama anda" required />
 
-        <!-- PRODUK 100 GR -->
-        <div class="bg-yellow-50 p-6 rounded-2xl shadow-smooth">
-          <img src="abon-100gr.jpg" alt="Abon Sapi Tumbuk Barokah 100gr" class="rounded-lg mb-4 w-full">
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">Kemasan 100gr (Standing Pouch)</h3>
-          <ul class="text-left mx-auto inline-block text-gray-700 mb-4">
-            <li>Harga ecer: <b>Rp 35.999 / pcs</b></li>
-            <li>Beli ≥ 3 pack: <b>Rp 33.500 / pack</b></li>
-            <li>Beli ≥ 6 pack: <b>Rp 33.100 / pack</b></li>
-            <li>Beli ≥ 10 pack: <b>Rp 32.400 / pack</b></li>
-            <li>Beli ≥ 25 pack: <b>Rp 30.600 / pack</b></li>
-            <li>Reseller: Diskon 22% / Rp 28.100 / Pack (min. 50 pcs)</li>
-          </ul>
-          </ul>
-          <p class="text-sm text-gray-500 mb-3">*Belum termasuk ongkir</p>
-          <a href="https://wa.me/6285725046201?text=Halo%20Barokah%2C%20saya%20ingin%20pesan%20Abon%20Sapi%20Tumbuk%20100gr" target="_blank" class="inline-block bg-green-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-600 transition">
-            Pesan via WhatsApp
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+    <label>Alamat Lengkap</label>
+    <textarea id="alamat" placeholder="Masukkan alamat pengiriman..." required></textarea>
 
-  <!-- VIDEO & CERITA SECTION -->
-  <section id="tentang" class="py-16 bg-gray-50 text-gray-800">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-6">Proses Pembuatan Abon Sapi Tumbuk BAROKAH</h2>
-      <p class="text-lg text-gray-600 mb-10 max-w-3xl mx-auto">
-        Dibuat dari daging sapi segar pilihan, tanpa bahan pengawet, diolah secara higienis 
-        menggunakan resep tradisional khas Malang yang turun-temurun. 
-        Inilah kenapa rasanya gurih, renyah, dan <b>benar-benar instan!</b>  
-        Tinggal tabur di atas nasi hangat — langsung nikmat tanpa harus masak apa-apa 🍚🔥
-      </p>
+    <label>Pilih Jenis Produk</label>
+    <select id="produk" onchange="hitungTotal()">
+      <option value="">-- Pilih Produk --</option>
+      <option value="10">Abon Sapi 10gr (Rp 4.990)</option>
+      <option value="100">Abon Sapi 100gr (Rp 35.999)</option>
+    </select>
 
-      <!-- VIDEO PLAYER -->
-      <div class="aspect-w-16 aspect-h-9 rounded-2xl overflow-hidden shadow-lg mb-10">
-        <video controls autoplay muted loop playsinline class="w-full rounded-xl">
-          <source src="video-proses.mp4" type="video/mp4">
-          Browser kamu tidak mendukung pemutar video.
-        </video>
-      </div>
+    <label>Jumlah (pcs)</label>
+    <input type="number" id="jumlah" min="1" value="1" oninput="hitungTotal()" />
 
-      <!-- CERITA TOKO -->
-      <div class="bg-white p-8 rounded-2xl shadow-md max-w-3xl mx-auto">
-        <img src="logo-barokah.png" alt="Logo Barokah Halalan Food" class="mx-auto w-32 mb-4">
-        <h3 class="text-2xl font-bold text-gray-900 mb-3">Tentang BAROKAH HALALAN FOOD</h3>
-        <p class="text-gray-700 mb-4">
-          Berlokasi di <b>Pujon, Kabupaten Malang</b>, kami adalah UMKM lokal yang berdiri sejak 2018 
-          dengan semangat menghadirkan <b>Makanan Instan & Camilan Kekinian</b> untuk keluarga Indonesia.
-        </p>
-        <p class="text-gray-700">
-          Fokus kami adalah produk instan sehat yang <b>praktis tanpa ribet</b>.  
-          Tidak seperti mie instan yang harus direbus dulu — 
-          <b>Abon Sapi Tumbuk BAROKAH</b> bisa langsung disantap. 
-          Tabur di nasi, roti, atau mie — semua jadi lezat dalam sekejap!
-        </p>
-      </div>
-    </div>
-  </section>
+    <label>Kategori Pemesanan</label>
+    <select id="kategori">
+      <option value="pembeli">Pembeli Biasa</option>
+      <option value="reseller">Reseller</option>
+    </select>
 
-  <!-- FORM PEMESANAN CEPAT -->
-  <section id="pesan" class="py-16 bg-yellow-50">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-6 text-gray-900">🛍️ Form Pemesanan Cepat</h2>
-      <p class="text-gray-700 mb-10 text-lg">
-        Isi data di bawah ini dan kirim langsung ke WhatsApp kami.  
-        Tim <b>BAROKAH HALALAN FOOD</b> siap memproses pesananmu secepatnya! 🚀
-      </p>
+    <div class="total" id="total">Total: Rp 0</div>
 
-      <form id="orderForm" class="bg-white p-8 rounded-2xl shadow-md space-y-6 text-left">
-        <div>
-          <label class="block font-semibold mb-2">Nama Pemesan</label>
-          <input type="text" id="nama" placeholder="Masukkan nama kamu" required
-            class="w-full p-3 border rounded-lg focus:ring focus:ring-yellow-300">
-        </div>
-
-        <div>
-          <label class="block font-semibold mb-2">Varian Produk</label>
-          <select id="varian" required class="w-full p-3 border rounded-lg focus:ring focus:ring-yellow-300">
-            <option value="">-- Pilih Varian --</option>
-            <option value="Abon Sapi 10gr (Original)">Abon Sapi 10gr (Original)</option>
-            <option value="Abon Sapi 10gr (Pedas)">Abon Sapi 10gr (Pedas)</option>
-            <option value="Abon Sapi 100gr (Original)">Abon Sapi 100gr (Original)</option>
-            <option value="Abon Sapi 100gr (Pedas)">Abon Sapi 100gr (Pedas)</option>
-          </select>
-        </div>
-
-        <div>
-          <label class="block font-semibold mb-2">Jumlah Pesanan</label>
-          <input type="number" id="jumlah" min="1" placeholder="Contoh: 5" required
-            class="w-full p-3 border rounded-lg focus:ring focus:ring-yellow-300">
-        </div>
-
-        <div>
-          <label class="block font-semibold mb-2">Catatan (Opsional)</label>
-          <textarea id="catatan" rows="3" placeholder="Contoh: Kirim ke alamat kantor" 
-            class="w-full p-3 border rounded-lg focus:ring focus:ring-yellow-300"></textarea>
-        </div>
-
-        <button type="button" onclick="kirimWhatsApp()" 
-          class="w-full bg-green-600 hover:bg-green-500 text-white font-semibold py-3 rounded-full text-lg transition">
-          Pesan Sekarang 📩
-        </button>
-      </form>
-
-      <!-- Tombol Chat Langsung -->
-      <div class="mt-10">
-        <a href="https://wa.me/6285725046201?text=Halo%20Barokah%20Halalan%20Food!%20Saya%20tertarik%20dengan%20Abon%20Sapi%20Tumbuk%20BAROKAH."
-          target="_blank"
-          class="inline-block bg-green-500 hover:bg-green-400 text-white font-semibold py-3 px-8 rounded-full shadow-md transition">
-          Chat Langsung di WhatsApp 💬
-        </a>
-      </div>
-    </div>
-  </section>
+    <button onclick="kirimPesanan()">Kirim Pesanan via WhatsApp</button>
+  </div>
 
   <script>
-    function kirimWhatsApp() {
-      const nama = document.getElementById("nama").value;
-      const varian = document.getElementById("varian").value;
-      const jumlah = document.getElementById("jumlah").value;
-      const catatan = document.getElementById("catatan").value;
+    const harga10 = 4990;
+    const harga100 = 35999;
 
-      if (!nama || !varian || !jumlah) {
-        alert("Mohon isi semua data dengan benar!");
+    function hitungTotal() {
+      const produk = document.getElementById('produk').value;
+      const jumlah = document.getElementById('jumlah').value;
+      let total = 0;
+
+      if (produk === "10") total = harga10 * jumlah;
+      else if (produk === "100") total = harga100 * jumlah;
+
+      document.getElementById('total').textContent = 
+        `Total: Rp ${total.toLocaleString('id-ID')}`;
+    }
+
+    function kirimPesanan() {
+      const nama = document.getElementById('nama').value;
+      const alamat = document.getElementById('alamat').value;
+      const produk = document.getElementById('produk').value;
+      const jumlah = document.getElementById('jumlah').value;
+      const kategori = document.getElementById('kategori').value;
+
+      if (!nama || !alamat || !produk || !jumlah) {
+        alert("Mohon lengkapi semua data terlebih dahulu!");
         return;
       }
 
-      const pesan = `Halo Barokah Halalan Food!%0ASaya ingin pesan:%0A%0A👤 Nama: ${nama}%0A📦 Varian: ${varian}%0A🔢 Jumlah: ${jumlah}%0A📝 Catatan: ${catatan || '-'}%0A%0AMohon konfirmasi ya!`;
-      const nomorWA = "6285725046201";
-      window.open(`https://wa.me/${nomorWA}?text=${pesan}`, "_blank");
+      let namaProduk = produk === "10" ? "Abon Sapi 10gr" : "Abon Sapi 100gr";
+      let total = produk === "10" ? harga10 * jumlah : harga100 * jumlah;
+      let nomor = kategori === "reseller" ? "6282133079396" : "6285725046201";
+
+      let pesan = `Halo Admin Abon Barokah,%0ASaya ingin memesan:%0A` +
+                  `Nama: ${nama}%0A` +
+                  `Alamat: ${alamat}%0A` +
+                  `Produk: ${namaProduk}%0A` +
+                  `Jumlah: ${jumlah} pcs%0A` +
+                  `Total: Rp ${total.toLocaleString('id-ID')}`;
+
+      window.open(`https://wa.me/${nomor}?text=${pesan}`, "_blank");
     }
   </script>
-
- <!-- CTA Reseller -->
-  <section id="reseller" class="bg-gradient-to-r from-yellow-100 to-yellow-200 py-16 text-center">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">🌟 Mau Jadi Reseller Abon Sapi BAROKAH?</h2>
-      <p class="text-lg text-gray-700 mb-8">
-        Dapatkan <b>diskon khusus 20%</b> untuk pembelian minimal 50 pcs!  
-        Produk mudah dijual, cepat laku, dan banyak dicari.  
-        Yuk, mulai usaha kamu hari ini bersama <b>BAROKAH HALALAN FOOD</b> 💼
-      </p>
-      <a href="https://wa.me/6285725046201?text=Halo%20Barokah%20Halalan%20Food!%20Saya%20ingin%20jadi%20Reseller%20Abon%20Sapi%20Tumbuk%20BAROKAH."
-        target="_blank"
-        class="inline-block bg-green-600 hover:bg-green-500 text-white font-semibold py-3 px-8 rounded-full shadow-md transition">
-        Hubungi untuk Jadi Reseller 📦
-      </a>
-    </div>
-  </section>
-
-<!-- FOOTER -->
-  <footer class="bg-gray-900 text-gray-200 py-10">
-    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8">
-    
-    <!-- Kolom 1 -->
-    <div>
-      <img src="logo-barokah.png" alt="Logo Barokah Halalan Food" class="w-32 mb-3">
-      <h3 class="text-lg font-semibold mb-2 text-yellow-300">BAROKAH HALALAN FOOD</h3>
-      <p class="text-sm text-gray-200">
-        Makanan Instan & Camilan Kekinian!  
-        Dibuat dengan bahan halal, sehat, dan penuh berkah 🍃
-      </p>
-    </div>
-
-    <!-- Kolom 2 -->
-    <div>
-      <h3 class="text-lg font-semibold mb-3 text-yellow-300">Kontak Kami</h3>
-      <ul class="text-sm space-y-2 text-gray-200">
-        <li>📍 Pujon, Kabupaten Malang</li>
-        <li>📞 WhatsApp: 
-          <a href="https://wa.me/6285725046201" class="text-yellow-300 hover:underline">0857-2504-6201</a>
-        </li>
-        <li>📧 Email: 
-          <a href="mailto:barokahhalalanfood@gmail.com" class="text-yellow-300 hover:underline">barokahhalalanfood@gmail.com</a>
-        </li>
-      </ul>
-    </div>
-
-   <!-- Kolom 3 -->
-<div>
-  <h3 class="text-lg font-semibold mb-3 text-yellow-300">Ikuti Kami</h3>
-  <div class="flex flex-col space-y-4">
-    <a href="https://www.facebook.com/Barokahhalalanfood2025" target="_blank" class="flex items-center space-x-3 hover:text-yellow-400">
-      <i class="fab fa-facebook text-2xl text-blue-500"></i>
-      <span class="text-base text-gray-100 font-medium">Facebook</span>
-    </a>
-    <a href="https://www.instagram.com/Barokahhalalanfood2025" target="_blank" class="flex items-center space-x-3 hover:text-yellow-400">
-      <i class="fab fa-instagram text-2xl text-pink-500"></i>
-      <span class="text-base text-gray-100 font-medium">Instagram</span>
-    </a>
-    <a href="https://www.tiktok.com/@barokah_halalanfood" target="_blank" class="flex items-center space-x-3 hover:text-yellow-400">
-      <i class="fab fa-tiktok text-2xl text-white"></i>
-      <span class="text-base text-gray-100 font-medium">TikTok</span>
-    </a>
-    <a href="https://tokopedia.com/barokah-halalan-food" target="_blank" class="flex items-center space-x-3 hover:text-yellow-400">
-      <img src="tokopedia.png" alt="Tokopedia" class="w-6 h-6 object-contain rounded-sm">
-      <span class="text-base text-gray-100 font-medium">Tokopedia</span>
-    </a>
-    <a href="https://shopee.co.id/baariklanaashop2025" target="_blank" class="flex items-center space-x-3 hover:text-yellow-400">
-      <img src="shopee.png" alt="Shopee" class="w-6 h-6 object-contain rounded-sm">
-      <span class="text-base text-gray-100 font-medium">Shopee</span>
-    </a>
-  </div>
-</div>
-
-    <div class="text-center mt-10 border-t border-yellow-600 pt-6 text-sm text-gray-200">
-     © 2025 BAROKAH HALALAN FOOD. Semua Hak Dilindungi.
-   </div>
-  </footer>
- </body>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
