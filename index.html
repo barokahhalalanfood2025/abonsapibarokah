@@ -38,13 +38,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
   <style>
-    body { opacity: 0; visibility: hidden; transition: opacity 0.6s ease-out; }
+    /* Fade-in effect */
+    body { opacity: 0; visibility: hidden; transition: opacity 0.5s ease-out; }
     body.loaded { opacity: 1; visibility: visible; }
-    /* Custom Scrollbar tetap dimuat di awal */
+    
+    /* Scrollbar */
     ::-webkit-scrollbar { width: 10px; }
     ::-webkit-scrollbar-track { background: #fffaf3; }
     ::-webkit-scrollbar-thumb { background: #b8860b; border-radius: 5px; }
     ::-webkit-scrollbar-thumb:hover { background: #15803d; }
+    
+    /* Hero Background */
     .hero-bg {
       background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1558030006-450675393462?q=80&w=1931&auto=format&fit=crop'); 
       background-size: cover;
@@ -81,6 +85,7 @@
 
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+  
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"></noscript>
 
@@ -125,7 +130,7 @@
           
           <div class="bg-white border border-gray-100 rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
             <div class="relative bg-yellow-50 aspect-square flex items-center justify-center overflow-hidden">
-              <img src="abon-10gr.webp" alt="Abon Sapi Tumbuk Barokah 10gr" class="h-full w-full object-cover group-hover:scale-110 transition duration-500">
+              <img src="abon-10gr.webp" alt="Abon Sapi Tumbuk Barokah 10gr" width="500" height="500" class="h-full w-full object-cover group-hover:scale-110 transition duration-500">
               <div class="absolute top-4 right-4 bg-red-700 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Hemat</div>
             </div>
             <div class="p-8">
@@ -148,7 +153,7 @@
 
           <div class="bg-white border border-gray-100 rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
             <div class="relative bg-yellow-50 aspect-square flex items-center justify-center overflow-hidden">
-              <img src="abon-100gr.webp" alt="Abon Sapi Tumbuk Barokah 100gr" class="h-full w-full object-cover group-hover:scale-110 transition duration-500">
+              <img src="abon-100gr.webp" alt="Abon Sapi Tumbuk Barokah 100gr" width="500" height="500" class="h-full w-full object-cover group-hover:scale-110 transition duration-500">
               <div class="absolute top-4 right-4 bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full shadow-md">Best Value</div>
             </div>
             <div class="p-8">
@@ -178,7 +183,7 @@
         <div class="flex flex-col md:flex-row items-center gap-12">
           <div class="w-full md:w-1/2">
             <div class="relative rounded-2xl shadow-2xl overflow-hidden border-4 border-white">
-              <video controls preload="metadata" poster="abon-100gr.webp" class="w-full" aria-label="Video Proses Pembuatan Abon">
+              <video controls preload="none" poster="abon-100gr.webp" class="w-full" aria-label="Video Proses Pembuatan Abon">
                 <source src="video-proses.mp4" type="video/mp4">
                 Browser kamu tidak mendukung pemutar video.
               </video>
@@ -205,7 +210,7 @@
               </li>
             </ul>
             <div class="flex items-center gap-4">
-              <img src="logo-barokah.webp" alt="Logo Barokah Halalan Food" class="h-16 object-contain">
+              <img src="logo-barokah.webp" alt="Logo Barokah Halalan Food" width="64" height="64" class="h-16 object-contain">
               <div>
                 <p class="font-bold text-gray-900">Barokah Halalan Food</p>
                 <p class="text-sm text-gray-600">Since 2018</p>
@@ -293,7 +298,7 @@
       
       <div>
         <div class="flex items-center gap-3 mb-4">
-            <img src="logo-barokah.webp" alt="Logo Barokah Food" class="w-12 h-12 bg-white rounded-full p-1">
+            <img src="logo-barokah.webp" alt="Logo Barokah Food" width="48" height="48" class="w-12 h-12 bg-white rounded-full p-1">
             <span class="text-xl font-bold text-white">BAROKAH FOOD</span>
         </div>
         <p class="text-sm leading-relaxed mb-6 text-gray-300">
@@ -325,10 +330,10 @@
            </a>
            <div class="flex gap-2 mt-2">
                <a href="https://tokopedia.com/barokah-halalan-food" class="opacity-80 hover:opacity-100" aria-label="Kunjungi Tokopedia Kami">
-                 <img src="tokopedia.webp" alt="Tokopedia Barokah Food" class="h-8 bg-white rounded p-1">
+                 <img src="tokopedia.webp" alt="Tokopedia Barokah Food" width="96" height="32" class="h-8 bg-white rounded p-1">
                </a>
                <a href="https://shopee.co.id/baariklanaashop2025" class="opacity-80 hover:opacity-100" aria-label="Kunjungi Shopee Kami">
-                 <img src="shopee.webp" alt="Shopee Barokah Food" class="h-8 bg-white rounded p-1">
+                 <img src="shopee.webp" alt="Shopee Barokah Food" width="96" height="32" class="h-8 bg-white rounded p-1">
                </a>
            </div>
         </div>
@@ -338,17 +343,16 @@
   </footer>
 
   <script>
-    // 1. Script untuk menampilkan halaman setelah semua resource (termasuk Tailwind) siap
+    // JAVASCRIPT LOADER untuk efek Fade In
     window.addEventListener('load', function() {
       document.body.classList.add('loaded');
     });
-
-    // 2. Fallback jika koneksi lambat, tampilkan konten setelah 3 detik maks
+    
+    // Fallback 
     setTimeout(function(){
       document.body.classList.add('loaded');
     }, 3000);
 
-    // 3. Script Kirim WA
     function kirimWhatsApp() {
       const nama = document.getElementById("nama").value;
       const varian = document.getElementById("varian").value;
