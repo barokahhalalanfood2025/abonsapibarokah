@@ -36,41 +36,15 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"></noscript>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            barokah: {
-              green: '#15803d', /* Green-700 */
-              gold: '#b8860b',
-              cream: '#fffaf3',
-            }
-          },
-          fontFamily: {
-            sans: ['Poppins', 'sans-serif'],
-          },
-          animation: {
-            'bounce-slow': 'bounce 3s infinite',
-          }
-        }
-      }
-    }
-  </script>
-
+  
   <style>
+    body { opacity: 0; visibility: hidden; transition: opacity 0.6s ease-out; }
+    body.loaded { opacity: 1; visibility: visible; }
+    /* Custom Scrollbar tetap dimuat di awal */
     ::-webkit-scrollbar { width: 10px; }
     ::-webkit-scrollbar-track { background: #fffaf3; }
     ::-webkit-scrollbar-thumb { background: #b8860b; border-radius: 5px; }
     ::-webkit-scrollbar-thumb:hover { background: #15803d; }
-    
     .hero-bg {
       background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1558030006-450675393462?q=80&w=1931&auto=format&fit=crop'); 
       background-size: cover;
@@ -78,6 +52,38 @@
       background-attachment: fixed;
     }
   </style>
+
+  <script src="https://cdn.tailwindcss.com" defer></script>
+
+  <script>
+    tailwind = {
+      config: {
+        theme: {
+          extend: {
+            colors: {
+              barokah: {
+                green: '#15803d',
+                gold: '#b8860b',
+                cream: '#fffaf3',
+              }
+            },
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+            },
+            animation: {
+              'bounce-slow': 'bounce 3s infinite',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"></noscript>
+
 </head>
 <body class="bg-barokah-cream text-gray-800 antialiased">
 
@@ -332,6 +338,17 @@
   </footer>
 
   <script>
+    // 1. Script untuk menampilkan halaman setelah semua resource (termasuk Tailwind) siap
+    window.addEventListener('load', function() {
+      document.body.classList.add('loaded');
+    });
+
+    // 2. Fallback jika koneksi lambat, tampilkan konten setelah 3 detik maks
+    setTimeout(function(){
+      document.body.classList.add('loaded');
+    }, 3000);
+
+    // 3. Script Kirim WA
     function kirimWhatsApp() {
       const nama = document.getElementById("nama").value;
       const varian = document.getElementById("varian").value;
