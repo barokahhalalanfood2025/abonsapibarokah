@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <meta name="google-site-verification" content="h_AbSN3L0OSNWjGgKZYdA0VZN2F-Jnu6sK3R3Qp3HcA" />
   
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -33,9 +34,14 @@
     }
   </script>
   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"></noscript>
 
   <script>
     tailwind.config = {
@@ -43,7 +49,7 @@
         extend: {
           colors: {
             barokah: {
-              green: '#15803d', /* Hijau yang lebih gelap (Green-700) untuk kontras */
+              green: '#15803d', /* Green-700 */
               gold: '#b8860b',
               cream: '#fffaf3',
             }
@@ -60,7 +66,6 @@
   </script>
 
   <style>
-    /* Custom Scrollbar */
     ::-webkit-scrollbar { width: 10px; }
     ::-webkit-scrollbar-track { background: #fffaf3; }
     ::-webkit-scrollbar-thumb { background: #b8860b; border-radius: 5px; }
@@ -103,7 +108,6 @@
   </header>
 
   <main>
-
     <section id="produk" class="py-20 bg-white">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
@@ -111,62 +115,55 @@
           <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
         </div>
         
-       <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-  
-  <div class="bg-white border border-gray-100 rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
-    
-    <div class="relative bg-yellow-50 aspect-square flex items-center justify-center overflow-hidden">
-      
-      <img src="abon-10gr.webp" alt="Abon Sapi Tumbuk Barokah 10gr" class="h-full w-full object-cover group-hover:scale-110 transition duration-500">
-      
-      <div class="absolute top-4 right-4 bg-red-700 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Hemat</div>
-    </div>
+        <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+          
+          <div class="bg-white border border-gray-100 rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+            <div class="relative bg-yellow-50 aspect-square flex items-center justify-center overflow-hidden">
+              <img src="abon-10gr.webp" alt="Abon Sapi Tumbuk Barokah 10gr" class="h-full w-full object-cover group-hover:scale-110 transition duration-500">
+              <div class="absolute top-4 right-4 bg-red-700 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Hemat</div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">Kemasan Sachet (10gr)</h3>
+              <p class="text-gray-600 text-sm mb-4">Praktis sekali makan. Cocok untuk bekal sekolah atau kantor.</p>
+              
+              <div class="bg-gray-50 p-4 rounded-xl mb-6">
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li class="flex justify-between border-b border-gray-200 pb-1"><span>Eceran</span> <b>Rp 4.990 /pcs</b></li>
+                  <li class="flex justify-between border-b border-gray-200 pb-1"><span>1 Pack (10 pcs)</span> <b>Rp 37.900</b></li>
+                  <li class="flex justify-between text-green-800 font-semibold"><span>Reseller (min 50)</span> <b>Rp 29.600 /pack</b></li>
+                </ul>
+              </div>
+              
+              <a href="https://wa.me/6285725046201?text=Halo%20Barokah%2C%20saya%20ingin%20pesan%20Abon%20Sapi%20Tumbuk%2010gr" target="_blank" class="block w-full text-center bg-green-700 text-white py-3 rounded-full font-semibold hover:bg-green-800 transition shadow-lg shadow-green-700/30" aria-label="Pesan Abon 10gr via WhatsApp">
+                <i class="fab fa-whatsapp mr-2"></i> Pesan via WhatsApp
+              </a>
+            </div>
+          </div>
 
-    <div class="p-8">
-      <h3 class="text-2xl font-bold text-gray-900 mb-2">Kemasan Sachet (10gr)</h3>
-      <p class="text-gray-600 text-sm mb-4">Praktis sekali makan. Cocok untuk bekal sekolah atau kantor.</p>
-      
-      <div class="bg-gray-50 p-4 rounded-xl mb-6">
-        <ul class="space-y-2 text-sm text-gray-700">
-          <li class="flex justify-between border-b border-gray-200 pb-1"><span>Eceran</span> <b>Rp 4.990 /pcs</b></li>
-          <li class="flex justify-between border-b border-gray-200 pb-1"><span>1 Pack (10 pcs)</span> <b>Rp 37.900</b></li>
-          <li class="flex justify-between text-green-800 font-semibold"><span>Reseller (min 50)</span> <b>Rp 29.600 /pack</b></li>
-        </ul>
-      </div>
-      
-      <a href="https://wa.me/6285725046201?text=Halo%20Barokah%2C%20saya%20ingin%20pesan%20Abon%20Sapi%20Tumbuk%2010gr" target="_blank" class="block w-full text-center bg-green-700 text-white py-3 rounded-full font-semibold hover:bg-green-800 transition shadow-lg shadow-green-700/30" aria-label="Pesan Abon 10gr via WhatsApp">
-        <i class="fab fa-whatsapp mr-2"></i> Pesan via WhatsApp
-      </a>
-    </div>
-  </div>
+          <div class="bg-white border border-gray-100 rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+            <div class="relative bg-yellow-50 aspect-square flex items-center justify-center overflow-hidden">
+              <img src="abon-100gr.webp" alt="Abon Sapi Tumbuk Barokah 100gr" class="h-full w-full object-cover group-hover:scale-110 transition duration-500">
+              <div class="absolute top-4 right-4 bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full shadow-md">Best Value</div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">Kemasan Pouch (100gr)</h3>
+              <p class="text-gray-600 text-sm mb-4">Dilengkapi ziplock agar tetap renyah. Stok wajib di meja makan.</p>
+              
+              <div class="bg-gray-50 p-4 rounded-xl mb-6">
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li class="flex justify-between border-b border-gray-200 pb-1"><span>Harga Ecer</span> <b>Rp 35.999 /pcs</b></li>
+                  <li class="flex justify-between border-b border-gray-200 pb-1"><span>Beli 3 Pack</span> <b>Rp 33.500 /pack</b></li>
+                  <li class="flex justify-between text-green-800 font-semibold"><span>Reseller (min 50)</span> <b>Rp 28.100 /pack</b></li>
+                </ul>
+              </div>
 
-  <div class="bg-white border border-gray-100 rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
-    
-    <div class="relative bg-yellow-50 aspect-square flex items-center justify-center overflow-hidden">
-      <img src="abon-100gr.webp" alt="Abon Sapi Tumbuk Barokah 100gr" class="h-full w-full object-cover group-hover:scale-110 transition duration-500">
-      
-      <div class="absolute top-4 right-4 bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full shadow-md">Best Value</div>
-    </div>
+              <a href="https://wa.me/6285725046201?text=Halo%20Barokah%2C%20saya%20ingin%20pesan%20Abon%20Sapi%20Tumbuk%20100gr" target="_blank" class="block w-full text-center bg-green-700 text-white py-3 rounded-full font-semibold hover:bg-green-800 transition shadow-lg shadow-green-700/30" aria-label="Pesan Abon 100gr via WhatsApp">
+                <i class="fab fa-whatsapp mr-2"></i> Pesan via WhatsApp
+              </a>
+            </div>
+          </div>
 
-    <div class="p-8">
-      <h3 class="text-2xl font-bold text-gray-900 mb-2">Kemasan Pouch (100gr)</h3>
-      <p class="text-gray-600 text-sm mb-4">Dilengkapi ziplock agar tetap renyah. Stok wajib di meja makan.</p>
-      
-      <div class="bg-gray-50 p-4 rounded-xl mb-6">
-        <ul class="space-y-2 text-sm text-gray-700">
-          <li class="flex justify-between border-b border-gray-200 pb-1"><span>Harga Ecer</span> <b>Rp 35.999 /pcs</b></li>
-          <li class="flex justify-between border-b border-gray-200 pb-1"><span>Beli 3 Pack</span> <b>Rp 33.500 /pack</b></li>
-          <li class="flex justify-between text-green-800 font-semibold"><span>Reseller (min 50)</span> <b>Rp 28.100 /pack</b></li>
-        </ul>
-      </div>
-
-      <a href="https://wa.me/6285725046201?text=Halo%20Barokah%2C%20saya%20ingin%20pesan%20Abon%20Sapi%20Tumbuk%20100gr" target="_blank" class="block w-full text-center bg-green-700 text-white py-3 rounded-full font-semibold hover:bg-green-800 transition shadow-lg shadow-green-700/30" aria-label="Pesan Abon 100gr via WhatsApp">
-        <i class="fab fa-whatsapp mr-2"></i> Pesan via WhatsApp
-      </a>
-    </div>
-  </div>
-
-</div>
+        </div>
       </div>
     </section>
 
@@ -283,7 +280,6 @@
         </a>
       </div>
     </section>
-
   </main>
 
   <footer class="bg-gray-900 text-gray-300 py-16">
@@ -323,10 +319,10 @@
            </a>
            <div class="flex gap-2 mt-2">
                <a href="https://tokopedia.com/barokah-halalan-food" class="opacity-80 hover:opacity-100" aria-label="Kunjungi Tokopedia Kami">
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Tokopedia_logo.webp" alt="Tokopedia Barokah Food" class="h-8 bg-white rounded p-1">
+                 <img src="tokopedia.webp" alt="Tokopedia Barokah Food" class="h-8 bg-white rounded p-1">
                </a>
                <a href="https://shopee.co.id/baariklanaashop2025" class="opacity-80 hover:opacity-100" aria-label="Kunjungi Shopee Kami">
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Shopee_logo.svg/1200px-Shopee_logo.svg.webp" alt="Shopee Barokah Food" class="h-8 bg-white rounded p-1">
+                 <img src="shopee.webp" alt="Shopee Barokah Food" class="h-8 bg-white rounded p-1">
                </a>
            </div>
         </div>
@@ -355,7 +351,3 @@
 
 </body>
 </html>
-
-
-
-
